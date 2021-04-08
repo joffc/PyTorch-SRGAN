@@ -151,7 +151,7 @@ torch.save(generator.state_dict(), '%s/generator_pretrain.pth' % opt.out)
 optim_generator = optim.Adam(generator.parameters(), lr=opt.generatorLR*0.1)
 optim_discriminator = optim.Adam(discriminator.parameters(), lr=opt.discriminatorLR*0.1)
 
-print 'SRGAN training'
+print ('SRGAN training')
 for epoch in range(opt.nEpochs):
     mean_generator_content_loss = 0.0
     mean_generator_adversarial_loss = 0.0
